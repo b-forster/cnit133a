@@ -1,0 +1,49 @@
+body {
+    background-color: white;
+    color: #222;
+}
+
+.darkmode {
+    background-color: #111;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+#darklight-img {
+    height: 280px;
+    border-radius: 10%;
+}
+
+.buttons-container {
+    text-align: center;
+}
+
+button {
+    color: black;
+    background-color: darkgray;
+    width: auto;
+    margin: 0 10px;
+    height: 30px;
+}
+
+section {
+    font-size: 1.2rem;
+}
+
+section:not(:first-of-type) {
+    margin-top: 1.2rem;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    font-style: italic;
+}
+
+figure {
+    text-align: center;
+    margin: 0 auto;
+}

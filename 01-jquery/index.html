@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+            content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Changing Theme</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="index.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Changing Themes</h1>
+        </header>
+        <section>
+            <h2>Using jQuery</h2>
+            <p>We will create a jQuery code so if the user clicks on Light
+                Theme
+                button, you will apply the appropriate class to make the
+                whole
+                page lighter. The image below will also be changed to show
+                the
+                image of the sun! If the Dark Theme button is clicked, the
+                image
+                of the moon will be displayed and the appropriate class will
+                be
+                applied to the whole page as well</p>
+            <figure>
+                <img id="darklight-img" src="sun.jpeg" alt="cartoon sun">
+            </figure>
+        </section>
+        <div class="buttons-container">
+            <button id="light">Light Theme</button>
+            <button id="dark">Dark Theme</button>
+        </div>
+        <section>
+            <h2>HTMX Triggers</h2>
+            <p>
+                An HTMX element can have multiple event triggers by including
+                the events as a comma-separated list in the
+                <code>hx-trigger</code> attribute.
+            </p>
+            <p>
+                In the example below, the value in the select dropdown is being
+                sent as part of a <code>POST</code> request to a search API
+                whenever the dropdown is loaded or the value is changed. The
+                results of this request will be displayed in the
+                <code>#results</code> element.
+            </p>
+            <code>
+                &lt;select
+                name="city"
+                id="city"
+                hx-post="/api/search"
+                hx-trigger="change, load"
+                hx-target="#result"
+                &gt;
+            </code>
+        </section>
+    </body>
+
+</html>
