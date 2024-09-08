@@ -1,11 +1,13 @@
 body {
     background-color: white;
     color: #222;
+    width: 70vw;
+    margin: 2em auto;
 }
 
 .darkmode {
     background-color: #111;
-    color: white;
+    color: #bbb;
 }
 
 h1 {
@@ -19,11 +21,13 @@ h1 {
 
 .buttons-container {
     text-align: center;
+    margin: 1em;
 }
 
 button {
     color: black;
     background-color: darkgray;
+    border-radius: 8%;
     width: auto;
     margin: 0 10px;
     height: 30px;

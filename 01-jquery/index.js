@@ -3,7 +3,6 @@ $(function () {
         $("#darklight-img").attr({ src, alt })
     }
 
-
     $(':button').on('click', (e) => {
         const modeName = e.target.id;
         if (modeName === 'dark') {
@@ -13,7 +12,7 @@ $(function () {
             updateImg('sun.jpeg', 'cartoon sun');
             $('body').removeClass('darkmode');
         } else {
-            console.log(`ERROR: ${modeName} mode is not defined`)
+            console.log(`ERROR: ${modeName} mode not found`)
         }
 
     })
