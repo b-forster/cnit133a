@@ -12,6 +12,8 @@ $(function () {
         } else if (modeName === 'light') {
             updateImg('sun.jpeg', 'cartoon sun');
             $('body').removeClass('darkmode');
+        } else {
+            console.log(`ERROR: ${modeName} mode is not defined`)
         }
 
     })
