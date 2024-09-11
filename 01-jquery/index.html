@@ -53,13 +53,14 @@
                 <code>#results</code> element.
             </p>
             <code>
-                &lt;select
-                name="city"
-                id="city"
-                hx-post="/api/search"
-                hx-trigger="change, load"
-                hx-target="#result"
-                &gt;
+                &lt;select<br>
+                &nbsp;&nbsp;name="city"<br>
+                &nbsp;&nbsp;id="city"<br>
+                &nbsp;&nbsp;hx-select="value"<br>
+                &nbsp;&nbsp;hx-post="/api/search"<br>
+                &nbsp;&nbsp;hx-trigger="change, load"<br>
+                &nbsp;&nbsp;hx-target="#result"<br>
+                &gt;...&lt;/select&gt;
             </code>
         </section>
     </body>
