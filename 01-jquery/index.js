@@ -1,12 +1,15 @@
 $(function () {
     const updateStyles = ({ selector = 'body', className, willAddClass }) => {
         willAddClass ?
-            $(selector).addClass(className) :
-            $(selector).removeClass(className);
+            $(selector).addClass(className, 140) :
+            $(selector).removeClass(className, 140);
     }
 
     const updateImg = ({ cssId, src, alt }) => {
-        $(cssId).attr({ src, alt });
+        $(cssId).attr('alt', alt)
+        $(cssId).fadeOut(40, function () {
+            $(this).attr('src', src).fadeIn(100);
+        })
     }
 
     const changeMode = ({ className, willAddClass, imgId, imgSrc, imgAlt }) => {

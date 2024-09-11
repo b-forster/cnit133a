@@ -1,6 +1,7 @@
 body {
     background-color: white;
     color: #222;
+    font-family: Verdana, sans-serif;
     width: 70vw;
     margin: 2em auto;
 }
