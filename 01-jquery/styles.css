@@ -66,3 +66,26 @@ figure {
     text-align: center;
     margin: 0 auto;
 }
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+footer {
+    text-align: right;
+}
+
+
+svg {
+    color: #333;
+}
+
+.darkmode svg {
+    color: darkgrey;
+}
+
+footer svg {
+    width: 2em;
+    margin: 0.2em;
+}
