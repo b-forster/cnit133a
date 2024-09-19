@@ -19,6 +19,14 @@
     shape-rendering: crispEdges;
 }
 
+.tooltip {
+    position: absolute;
+    color: black;
+    background-color: white;
+    font: 10px serif;
+    padding: 5px 10px;
+}
+
 body {
     background: #1a1a1a;
     color: #eaeaea;

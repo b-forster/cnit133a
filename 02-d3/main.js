@@ -19,6 +19,9 @@ const myColors = d3.scaleLinear()
     .domain([0, studentCounts.length])
     .range(['indianred', 'darkred'])
 
+const tooltip = d3.select('body').append('div')
+    .classed('tooltip', true)
+
 const verticalGuide = d3.scaleLinear()
     .domain([0, d3.max(studentCounts)])
     .range([height, 0])
@@ -57,11 +60,27 @@ graph.selectAll('rect')
     .attr('height', d => { return yS(d.students) })
     .attr('x', (_, i) => { return xS(i) })
     .attr('y', (d, _) => { return height - yS(d.students) })
-    .on('mouseover', function () {
-        d3.select(this).style('opacity', 0.6)
+    .on('mouseover', function (e, _) {
+        // d3.select(this)
+        //     .style('opacity', 0.8);
+
+        const { pageX: x, pageY: y } = d3.event;
+        tooltip.transition()
+            .duration(200)
+            .style('opacity', 1);
+        tooltip.html(
+            'Term&nbsp;-&nbsp;Students<br>' +
+            `${e.term}&nbsp;-&nbsp;${e.students}`
+        )
+            .style('left', x + 'px')
+            .style('top', y + 'px')
     })
     .on('mouseout', function () {
-        d3.select(this).style('opacity', 1)
+        // d3.select(this)
+        //     .style('opacity', 1)
+        tooltip.transition()
+            .duration(500)
+            .style("opacity", 0);
     })
 
 const xLabels = d3.scaleBand()
