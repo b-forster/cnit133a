@@ -4,7 +4,7 @@ await d3.json('hw3data.json')
     .then((d) => {
         data = d;
         studentCounts = data.map(d => { return d.students });
-        terms = data.map(d => { return d.term })
+        terms = data.map(d => { return d.term });
     })
     .catch((error) => {
         console.error(error);
@@ -18,23 +18,23 @@ const height = 200 - margin.top - margin.bottom,
 
 const myColors = d3.scaleLinear()
     .domain([0, studentCounts.length])
-    .range(['indianred', 'darkred'])
+    .range(['indianred', 'darkred']);
 
 const tooltip = d3.select('body').append('div')
-    .classed('tooltip', true)
+    .classed('tooltip', true);
 
 const verticalGuide = d3.scaleLinear()
     .domain([0, d3.max(studentCounts)])
-    .range([height, 0])
+    .range([height, 0]);
 
 const yS = d3.scaleLinear()
     .domain([0, d3.max(studentCounts)])
-    .range([0, height])
+    .range([0, height]);
 
 const xS = d3.scaleBand()
     .domain(d3.range(0, terms.length))
     .range([0, width])
-    .padding(0.1)
+    .padding(0.1);
 
 const graph = d3.select('#chart')
     .append('svg')
@@ -50,7 +50,7 @@ const graph = d3.select('#chart')
             .tickSize(-width, 0, 0)
             .tickPadding(5)
     )
-    .classed('axis', true)
+    .classed('axis', true);
 
 graph.selectAll('rect')
     .data(data)
@@ -73,12 +73,12 @@ graph.selectAll('rect')
             `${d.term}&nbsp;-&nbsp;${d.students}`
         )
             .style('left', (x + 75) + 'px')
-            .style('top', (y + 30) + 'px')
+            .style('top', (y + 30) + 'px');
     })
 
     .on('mouseout', function () {
         d3.select(this)
-            .style('opacity', 1)
+            .style('opacity', 1);
         tooltip.transition()
             .duration(500)
             .style("opacity", 0);
@@ -86,7 +86,7 @@ graph.selectAll('rect')
 
 const xLabels = d3.scaleBand()
     .domain(terms)
-    .range([0, width])
+    .range([0, width]);
 
 graph.append('g')
     .call(
@@ -95,4 +95,4 @@ graph.append('g')
             .tickSize(0)
             .tickPadding(8)
     )
-    .attr('transform', 'translate(0, ' + height + ')')
+    .attr('transform', 'translate(0, ' + height + ')');
