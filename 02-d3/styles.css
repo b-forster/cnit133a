@@ -21,10 +21,11 @@
 
 .tooltip {
     position: absolute;
-    color: black;
-    background-color: white;
-    font: 10px serif;
-    padding: 5px 10px;
+    color: darkred;
+    font: bold 10px sans-serif;
+    border-bottom: 1px solid darkred;
+    padding: 0 5px;
+    margin: 2px 5px;
 }
 
 body {

@@ -2,6 +2,10 @@
 ///// JSON DATA IMPORT /////
 ////////////////////////////
 
+// To use, comment out dummy data below
+// and add type="module" attr to js import
+// in html file
+
 
 // let data, studentCounts, terms = [];
 
@@ -111,17 +115,17 @@ graph.selectAll('rect')
     .attr('y', (d, _) => { return height - yS(d.students) })
     .on('mouseover', function (event, d) {
         d3.select(this)
-            .style('opacity', 0.8);
+            .style('opacity', 0.9);
 
-        const [x, y] = d3.pointer(event);
+        const barOffsetX = d3.select(event.target).attr('x');
+        const barOffsetY = d3.select(event.target).attr('y');
+        const barLabelX = Math.floor(barOffsetX) + margin.left + (barW / 2) + barSpace;
+        const barLabelY = Math.floor(barOffsetY) + margin.top;
         tooltip.transition()
             .style('opacity', 1);
-        tooltip.html(
-            'Term&nbsp;-&nbsp;Students<br>' +
-            `${d.term}&nbsp;-&nbsp;${d.students}`
-        )
-            .style('left', (x + 75) + 'px')
-            .style('top', (y + 30) + 'px');
+        tooltip.html(d.students)
+            .style('left', barLabelX + 'px')
+            .style('top', barLabelY + 'px')
     })
 
     .on('mouseout', function () {
