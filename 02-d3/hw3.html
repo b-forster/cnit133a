@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="D3 homework">
+    <title>D3 Homework</title>
+    <style>
+#chart rect{
+  fill: #4aaeea;
+}
+
+#chart text{
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end; 
+}
+
+.axis text{
+  font: 10px sans-serif;
+}
+
+.axis path, .axis line{
+  fill: none;
+  stroke : #fff;
+  shape-rendering: crispEdges;
+}
+
+body{
+  background: #1a1a1a;
+  color : #eaeaea;
+  padding : 10px;
+}
+</style>
+  </head>
+  <body>
+    <div id="chart"></div>
+  </body>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+
+  <script>
+    const data = [
+      {"term": "Spring 16", "students": 160},
+      {"term": "Fall 16", "students": 170},
+      {"term": "Spring 17", "students": 120},
+      {"term": "Fall 17", "students": 185},
+      {"term": "Spring 18", "students": 190},
+      {"term": "Fall 18", "students": 195}
+    ]
+</script>
