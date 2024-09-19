@@ -6,7 +6,8 @@ const data = [
     { "term": "Spring 18", "students": 190 },
     { "term": "Fall 18", "students": 195 }
 ]
-const studentCounts = data.map((d) => { return d.students; });
+const studentCounts = data.map(d => { return d.students });
+const terms = data.map(d => { return d.term })
 
 const margin = { top: 20, right: 20, bottom: 30, left: 40, }
 const height = 200 - margin.top - margin.bottom,
@@ -27,7 +28,7 @@ const yS = d3.scaleLinear()
     .range([0, height])
 
 const xS = d3.scaleBand()
-    .domain(d3.range(0, studentCounts.length))
+    .domain(d3.range(0, terms.length))
     .range([0, width])
     .padding(0.1)
 
@@ -38,11 +39,13 @@ const graph = d3.select('#chart')
     .style('background', 'silver')
     .append('g')
     .attr('transform', 'translate(' + margin.left + ', ' + margin.top + ')')
-    .call(d3.axisLeft(yS).scale(verticalGuide))
-
-graph.append('g')
-    .call(d3.axisBottom(xS))
-    .attr('transform', 'translate(0, ' + height + ')')
+    .call(
+        d3.axisLeft(yS)
+            .scale(verticalGuide)
+            .ticks(3)
+            .tickSize(0)
+            .tickPadding(8)
+    )
 
 graph.selectAll('rect')
     .data(data)
@@ -59,3 +62,16 @@ graph.selectAll('rect')
     .on('mouseout', function () {
         d3.select(this).style('opacity', 1)
     })
+
+const xLabels = d3.scaleBand()
+    .domain(terms)
+    .range([0, width])
+
+graph.append('g')
+    .call(
+        d3.axisBottom(xLabels)
+            .tickValues(terms)
+            .tickSize(0)
+            .tickPadding(8)
+    )
+    .attr('transform', 'translate(0, ' + height + ')')
