@@ -60,24 +60,24 @@ graph.selectAll('rect')
     .attr('height', d => { return yS(d.students) })
     .attr('x', (_, i) => { return xS(i) })
     .attr('y', (d, _) => { return height - yS(d.students) })
-    .on('mouseover', function (e, _) {
-        // d3.select(this)
-        //     .style('opacity', 0.8);
+    .on('mouseover', function (event, d) {
+        d3.select(this)
+            .style('opacity', 0.8);
 
-        const { pageX: x, pageY: y } = d3.event;
+        const [x, y] = d3.pointer(event);
         tooltip.transition()
-            .duration(200)
             .style('opacity', 1);
         tooltip.html(
             'Term&nbsp;-&nbsp;Students<br>' +
-            `${e.term}&nbsp;-&nbsp;${e.students}`
+            `${d.term}&nbsp;-&nbsp;${d.students}`
         )
-            .style('left', x + 'px')
-            .style('top', y + 'px')
+            .style('left', (x + 75) + 'px')
+            .style('top', (y + 30) + 'px')
     })
+
     .on('mouseout', function () {
-        // d3.select(this)
-        //     .style('opacity', 1)
+        d3.select(this)
+            .style('opacity', 1)
         tooltip.transition()
             .duration(500)
             .style("opacity", 0);
