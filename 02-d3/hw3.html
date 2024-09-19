@@ -5,45 +5,71 @@
     <meta name="description" content="D3 homework">
     <title>D3 Homework</title>
     <style>
-#chart rect{
-  fill: #4aaeea;
-}
+      #chart rect{
+        fill: #4aaeea;
+      }
 
-#chart text{
-  fill: white;
-  font: 10px sans-serif;
-  text-anchor: end; 
-}
+      #chart text{
+        fill: white;
+        font: 10px sans-serif;
+        text-anchor: end; 
+      }
 
-.axis text{
-  font: 10px sans-serif;
-}
+      .axis text{
+        font: 10px sans-serif;
+      }
 
-.axis path, .axis line{
-  fill: none;
-  stroke : #fff;
-  shape-rendering: crispEdges;
-}
+      .axis path, .axis line{
+        fill: none;
+        stroke : #fff;
+        shape-rendering: crispEdges;
+      }
 
-body{
-  background: #1a1a1a;
-  color : #eaeaea;
-  padding : 10px;
-}
-</style>
+      body{
+        background: #1a1a1a;
+        color : #eaeaea;
+        padding : 10px;
+      }
+    </style>
   </head>
   <body>
     <div id="chart"></div>
-  </body>
-  <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
 
-  <script>
-    const data = [
-      {"term": "Spring 16", "students": 160},
-      {"term": "Fall 16", "students": 170},
-      {"term": "Spring 17", "students": 120},
-      {"term": "Fall 17", "students": 185},
-      {"term": "Spring 18", "students": 190},
-      {"term": "Fall 18", "students": 195}
-    ]
-</script>
+    <script>
+      const data = [
+        {"term": "Spring 16", "students": 160},
+        {"term": "Fall 16", "students": 170},
+        {"term": "Spring 17", "students": 120},
+        {"term": "Fall 17", "students": 185},
+        {"term": "Spring 18", "students": 190},
+        {"term": "Fall 18", "students": 195}
+      ]
+      const studentCounts = data.map((d) => { return d.students; });
+
+
+      const height=200, width=500, barW=40, barSpace=5;
+
+
+      let yS = d3.scaleLinear()
+        .domain([0, d3.max(studentCounts)])
+        .range([0, height])
+
+      let graph = d3.select('#chart')
+        .append('svg')
+        .attr('width', width)
+        .attr('height', height)
+        .style('background', 'silver')
+
+      graph.selectAll('rect')
+        .data(data)
+        .enter()
+        .append('rect')
+        .style('fill', 'blue')
+        .attr('width', barW)
+        .attr('height', d => {return yS(d.students)})
+        .attr('x', (d, i) => { return i * (barW + barSpace)} )
+        .attr('y', (d, i) => { return height - d.students })
+    </script>
+  </body>
+</html>
