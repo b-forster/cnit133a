@@ -1,14 +1,62 @@
-let data, studentCounts, terms = [];
+////////////////////////////
+///// JSON DATA IMPORT /////
+////////////////////////////
 
-await d3.json('hw3data.json')
-    .then((d) => {
-        data = d;
-        studentCounts = data.map(d => { return d.students });
-        terms = data.map(d => { return d.term });
-    })
-    .catch((error) => {
-        console.error(error);
-    });
+
+// let data, studentCounts, terms = [];
+
+// await d3.json('hw3data.json')
+//     .then((d) => {
+//         data = d;
+//         studentCounts = data.map(d => { return d.students });
+//         terms = data.map(d => { return d.term });
+//     })
+//     .catch((error) => {
+//         console.error(error);
+//     });
+
+////////////////////////////
+///END JSON DATA IMPORT ////
+////////////////////////////
+
+
+//////////////////////////////////
+// DUMMY DATA FOR LOCAL TESTING //
+//////////////////////////////////
+
+const data = [
+    {
+        "term": "Spring 16",
+        "students": 160
+    },
+    {
+        "term": "Fall 16",
+        "students": 170
+    },
+    {
+        "term": "Spring 17",
+        "students": 120
+    },
+    {
+        "term": "Fall 17",
+        "students": 185
+    },
+    {
+        "term": "Spring 18",
+        "students": 190
+    },
+    {
+        "term": "Fall 18",
+        "students": 195
+    }
+];
+
+const studentCounts = data.map(d => { return d.students });
+const terms = data.map(d => { return d.term });
+
+////////////////////////////
+////// END DUMMY DATA///////
+////////////////////////////
 
 const margin = { top: 20, right: 20, bottom: 30, left: 40, }
 const height = 200 - margin.top - margin.bottom,
