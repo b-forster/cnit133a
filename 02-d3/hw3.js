@@ -8,13 +8,18 @@ const data = [
 ]
 const studentCounts = data.map((d) => { return d.students; });
 
-const height = 200, width = 500, barW = 40, barSpace = 5;
+const height = 200, width = 400, barW = 40, barSpace = 5;
 
-let yS = d3.scaleLinear()
+const yS = d3.scaleLinear()
     .domain([0, d3.max(studentCounts)])
     .range([0, height])
 
-let graph = d3.select('#chart')
+const xS = d3.scaleBand()
+    .domain(d3.range(0, studentCounts.length))
+    .range([0, width])
+    .padding(0.2)
+
+const graph = d3.select('#chart')
     .append('svg')
     .attr('width', width)
     .attr('height', height)
@@ -25,7 +30,7 @@ graph.selectAll('rect')
     .enter()
     .append('rect')
     .style('fill', 'blue')
-    .attr('width', barW)
+    .attr('width', xS.bandwidth)
     .attr('height', d => { return yS(d.students) })
-    .attr('x', (_, i) => { return i * (barW + barSpace) })
+    .attr('x', (_, i) => { return xS(i) })
     .attr('y', (d, _) => { return height - d.students })
