@@ -1,16 +1,14 @@
 # CNIT 133A - Javascript Libraries & Frameworks
 
-This repository contains the assignments submitted for CNIT 133A - Javascript Libraries & Frameworks, offered by the [Computer Networking & Information Technology](https://www.ccsf.edu/academics/ccsf-catalog/courses-by-department/computer-networking-and-information-technology) Department at City College of San Francisco ([CCSF](https://www.ccsf.edu/)).
+This repository contains my projects submitted for CNIT 133A - Javascript Libraries & Frameworks, offered by the [Computer Networking & Information Technology](https://www.ccsf.edu/academics/ccsf-catalog/courses-by-department/computer-networking-and-information-technology) (CNIT) Department at [City College of San Francisco](https://www.ccsf.edu/) (CCSF).
 
-Each assignment focuses on a different technology covered in the course. 
-
-I will continue uploading my assignments as they are submitted throughout the Fall 2024 semester.
+Each project focuses on a different technology covered in the course. I will continue uploading them as they are submitted throughout the Fall 2024 semester.
 
 This is intended to showcase my learning, and should not be used by students enrolled in the course.
 
 ## Topic 01: jQuery
 
-This assignment was a review of the [jQuery](https://jquery.com/) library, which was introduced in a prerequisite course.
+This project was a review of the [jQuery](https://jquery.com/) library, which was introduced in a prerequisite course.
 
 Clicking on the 'Light Mode' or 'Dark Mode' button triggers a jQuery event that changes the image, its alt text, and the text and background colors of the page.
 
@@ -18,7 +16,9 @@ The page also includes a section of text regarding [HTMX](https://htmx.org/). It
 
 ## Topic 02: D3.js
 
-Coming soon!
+This project was my first introduction to [D3](https://d3js.org/), a popular open-source library for visualizing data.
+
+I used D3 to generate a bar chart from JSON data representing student enrollment numbers for several academic terms. I also used D3 to trigger a tooltip when a bar is moused over, showing the corresponding number of students above the bar.
 
 ## Topic 03: Node.js & Deno
 
