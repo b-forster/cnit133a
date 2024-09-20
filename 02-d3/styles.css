@@ -1,5 +1,9 @@
+#chart {
+    margin: 3em;
+}
+
 #chart rect {
-    fill: #4aaeea;
+    fill: indianred;
 }
 
 #chart text {
@@ -32,4 +36,17 @@ body {
     background: #1a1a1a;
     color: #eaeaea;
     padding: 10px;
+    text-align: center;
+    width: 60vw;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #CD2223;
+    font-family: 'Arial Narrow';
+}
+
+.introText {
+    font-family: Helvetica;
+    line-height: 1.5em;
 }

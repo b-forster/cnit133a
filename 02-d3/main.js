@@ -62,11 +62,12 @@ const terms = data.map(d => { return d.term });
 ////// END DUMMY DATA///////
 ////////////////////////////
 
-const margin = { top: 20, right: 20, bottom: 30, left: 40, }
+const margin = { top: 30, right: 30, bottom: 30, left: 40, }
 const height = 200 - margin.top - margin.bottom,
     width = 400 - margin.left - margin.right,
     barW = 40,
     barSpace = 5;
+const fontSize = 10;
 
 const myColors = d3.scaleLinear()
     .domain([0, studentCounts.length])
@@ -113,14 +114,17 @@ graph.selectAll('rect')
     .attr('height', d => { return yS(d.students) })
     .attr('x', (_, i) => { return xS(i) })
     .attr('y', (d, _) => { return height - yS(d.students) })
-    .on('mouseover', function (event, d) {
+    .on('mouseover', function (_, d) {
         d3.select(this)
             .style('opacity', 0.9);
 
-        const barOffsetX = d3.select(event.target).attr('x');
-        const barOffsetY = d3.select(event.target).attr('y');
-        const barLabelX = Math.floor(barOffsetX) + margin.left + (barW / 2) + barSpace;
-        const barLabelY = Math.floor(barOffsetY) + margin.top;
+        const chartCoords = d3.select("#chart svg").node().getBoundingClientRect();
+        const [chartOffsetX, chartOffsetY] = [chartCoords.x, chartCoords.y]
+
+        const barOffsetX = parseInt(d3.select(this).attr('x'));
+        const barOffsetY = parseInt(d3.select(this).attr('y'));
+        const barLabelX = chartOffsetX + barOffsetX + barW + barSpace;
+        const barLabelY = chartOffsetY + barOffsetY + fontSize;
         tooltip.transition()
             .style('opacity', 1);
         tooltip.html(d.students)
