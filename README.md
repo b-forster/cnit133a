@@ -14,11 +14,15 @@ Clicking on the 'Light Mode' or 'Dark Mode' button triggers a jQuery event that 
 
 The page also includes a section of text regarding [HTMX](https://htmx.org/). It answers a question about how to bind multiple event triggers to the same action. HTMX was briefly introduced at this point in the course, although it is not used in the code for this assignment.
 
+<a href="https://hills.ccsf.edu/~bforster/cnit133a/01-jquery/index.html">View demo</a>
+
 ## Topic 02: D3.js
 
 This project was my first introduction to [D3](https://d3js.org/), a popular open-source library for visualizing data.
 
 I used D3 to generate a bar chart from JSON data representing student enrollment numbers for several academic terms. I also used D3 to trigger a tooltip when a bar is moused over, showing the corresponding number of students above the bar.
+
+<a href="https://hills.ccsf.edu/~bforster/cnit133a/02-d3/index.html">View demo</a>
 
 ## Topic 03: Node.js & Deno
 
