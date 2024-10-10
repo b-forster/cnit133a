@@ -24,9 +24,12 @@ I used D3 to generate a bar chart from JSON data representing student enrollment
 
 <a href="https://hills.ccsf.edu/~bforster/cnit133a/02-d3/index.html">View demo</a>
 
-## Topic 03: Node.js & Deno
+## Topic 03: Typescript, Node & Deno
 
-Coming soon!
+This module covered two technologies I was already very familiar with: [Typescript](https://www.typescriptlang.org/) and [Node](https://nodejs.org/en). It also introduced me to [Deno](https://deno.com/), a framework similar to Node and made by the same creator.
+
+Since we were assigned written exercises in lieu of a project, you can see a sample of my work with Node in my [D&D Archivist](https://github.com/b-forster/dnd-archivist) repository (Warning: WIP!)
+
 
 ## Topic 04: Angular
 
