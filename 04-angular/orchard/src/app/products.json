@@ -1,0 +1,36 @@
+[{
+"prodid": 1,
+"shortdesc": "Cherry Choc",
+"longdesc": "Dried cherry pieces covered with dark chocolate",
+"unitsize": "2.4 oz",
+"unitprice": "$2.30" 
+},
+{
+"prodid": 2,
+"shortdesc": "Mixed Nuts",
+"longdesc": "Organic mixed nuts lightly salted",
+"unitsize": "5.0 oz",
+"unitprice": "$4.89" 
+},
+{
+"prodid": 3,
+"shortdesc": "Dry Fruits",
+"longdesc": "Mix of different dry fruits",
+"unitsize": "1.2 oz",
+"unitprice": "$1.25" 
+},
+{
+"prodid": 4,
+"shortdesc": "Honey Almond",
+"longdesc": "Organic honey roasted almonds",
+"unitsize": "2.4 oz",
+"unitprice": "$3.50" 
+},
+{
+"prodid": 5,
+"shortdesc": "Big Pops",
+"longdesc": "Big bags of organic popcorn - different flavors",
+"unitsize": "24 oz",
+"unitprice": "$4.65" 
+}
+]

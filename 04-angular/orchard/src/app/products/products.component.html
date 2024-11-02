@@ -1,1 +1,8 @@
-<p>products works!</p>
+<section>
+    <h2>Products</h2>
+    <article *ngFor="let product of Products">
+        <h3>{{product.shortdesc}}</h3>
+        <p>{{product.longdesc}}, {{product.unitsize}}.</p>
+        <p>{{product.unitprice}}</p>
+    </article>
+</section>
