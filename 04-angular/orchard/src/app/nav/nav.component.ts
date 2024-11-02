@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './nav.component.css'
 })
 export class NavComponent {
-  appTitle: string = "Gems of the Orchard"
+  appTitleStart: string = "Orchard"
+  appTitleEnd: string = "Gems"
 }

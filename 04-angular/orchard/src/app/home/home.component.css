@@ -5,3 +5,7 @@ h2 {
 p {
     line-height: 1.75em;
 }
+
+.large {
+    font-size: 1.25em;
+}

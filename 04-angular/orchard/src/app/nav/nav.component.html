@@ -1,6 +1,14 @@
 <header>
     <div class="container">
-        <a routerLink="/" class="logo">{{appTitle}}</a>
+        <a routerLink="/" class="logo">
+            <img class="logo-img"
+                src="../assets/images/branch.png"
+                alt="Orchard Gems berry branch logo" />
+            <span class="logo-text decorative">
+                <span class="logo-start">{{appTitleStart}} </span>
+                <span class="logo-end">{{appTitleEnd}}</span>
+            </span>
+        </a>
         <nav>
             <ul>
                 <li><a routerLink="/">Home</a></li>
