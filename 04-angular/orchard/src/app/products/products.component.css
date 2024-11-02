@@ -15,7 +15,7 @@ h2 {
 
 .product {
     width: 20vw;
-    border: 3px inset #a47c48;
+    border: var(--border-style);
     border-radius: 10%;
     margin: 1em;
     padding: 1.5em;

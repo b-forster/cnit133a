@@ -3,6 +3,7 @@
     --main-font-color: rgb(1, 75, 1);
     --nav-color: #99c140;
     --emphasis-color: #EE4035;
+    --border-style: 3px inset #a47c48;
 }
 
 html,

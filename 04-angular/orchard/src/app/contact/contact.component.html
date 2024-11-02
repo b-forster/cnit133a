@@ -1,1 +1,60 @@
-<p>contact works!</p>
+<section>
+    <h2 class="decorative">Contact</h2>
+
+    <form [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+
+        <label>
+            Full Name:
+            <input type="text" formControlName="fullName">
+            <div *ngIf="submitted && emailForm.controls['fullName'].errors"
+                class="err">
+                <div
+                    *ngIf="emailForm.controls['fullName'].errors['required']">You
+                    cannot submit the form without a name</div>
+                <div
+                    *ngIf="emailForm.controls['fullName'].errors['minlength']">A
+                    valid name needs to have at least 5 characters</div>
+            </div>
+        </label>
+
+        <label>
+            Email Address:
+            <input type="text" formControlName="emailAddress">
+            <div *ngIf="submitted && emailForm.controls['emailAddress'].errors"
+                class="err">
+                <div
+                    *ngIf="emailForm.controls['emailAddress'].errors['required']">You
+                    cannot submit the form without an email address</div>
+                <div
+                    *ngIf="emailForm.controls['emailAddress'].errors['email']">Please
+                    enter a valid email address</div>
+            </div>
+        </label>
+
+        <label>
+            Message:
+            <textarea formControlName="message"></textarea>
+            <div *ngIf="submitted && emailForm.controls['message'].errors"
+                class="err">
+                <div
+                    *ngIf="emailForm.controls['message'].errors['required']">What
+                    is your message to us?</div>
+            </div>
+        </label>
+
+        <input type="submit" value="Send Message" class="btnsub">
+        <input type="reset" value="Clear Form" class="btnsub">
+
+    </form>
+
+    <section *ngIf="submitted" class="finalresults">
+        <h4>Data you are submitting</h4>
+        <p><em>Full Name:</em> <span>{{ emailForm.controls['fullName'].value
+                }}</span></p>
+        <p><em>Email Address:</em> <span>{{
+                emailForm.controls['emailAddress'].value
+                }}</span></p>
+        <p><em>Message:</em> <span>{{ emailForm.controls['message'].value
+                }}</span></p>
+    </section>
+</section>
