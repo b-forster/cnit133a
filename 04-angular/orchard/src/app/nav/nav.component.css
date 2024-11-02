@@ -1,0 +1,23 @@
+.logo {
+    color: var(--emphasis-color);
+    font-size: 2rem;
+    font-style: italic;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--nav-color);
+    height: 3em;
+}
+
+li {
+    padding: 0 3em;
+}
+
+a {
+    color: var(--background-color);
+}

@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --background-color: #fffffa;
+    --main-font-color: rgb(1, 75, 1);
+    --nav-color: #99c140;
+    --emphasis-color: #EE4035;
+}
+
+html,
+body {
+    background-color: var(--background-color);
+    font-family: 'Montserrat', serif;
+    color: var(--main-font-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--emphasis-color);
+}
+
+section {
+    width: 70%;
+    margin: 0 auto;
+}
