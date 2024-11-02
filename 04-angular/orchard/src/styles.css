@@ -23,6 +23,31 @@ a {
 }
 
 section {
-    width: 70%;
+    width: 90vw;
     margin: 0 auto;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+
+h2::before {
+    content: '؎   ';
+    line-height: 1.5em;
+    vertical-align: top;
+}
+
+h2::after {
+    content: '   ؎';
+    line-height: 1.5em;
+    vertical-align: top;
+}
+
+
+.large {
+    font-size: 1.25em;
 }

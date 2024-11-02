@@ -1,11 +1,7 @@
-h2 {
-    font-size: 2rem;
+section {
+    width: 70vw;
 }
 
 p {
     line-height: 1.75em;
-}
-
-.large {
-    font-size: 1.25em;
 }

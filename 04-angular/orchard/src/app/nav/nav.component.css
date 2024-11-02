@@ -13,7 +13,6 @@ li {
 }
 
 a {
-    /* color: var(--nav-color); */
     color: var(--background-color);
 }
 
@@ -26,11 +25,11 @@ a {
     vertical-align: top;
 }
 
-.logo-start {
+.logo-text-start {
     color: var(--main-font-color);
 }
 
-.logo-end {
+.logo-text-end {
     color: var(--emphasis-color);
 }
 
