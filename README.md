@@ -8,6 +8,8 @@ This is intended to showcase my learning, and should not be used by students enr
 
 ## Topic 01: jQuery
 
+<img width="500" alt="screen-jquery" src="https://github.com/user-attachments/assets/09d17faa-057d-43d7-9835-305a3e73fe37">
+
 This project was a review of the [jQuery](https://jquery.com/) library, which was introduced in a prerequisite course.
 
 Clicking on the 'Light Mode' or 'Dark Mode' button triggers a jQuery event that changes the image, its alt text, and the text and background colors of the page.
@@ -17,6 +19,8 @@ The page also includes a section of text regarding [HTMX](https://htmx.org/). It
 <a href="https://hills.ccsf.edu/~bforster/cnit133a/01-jquery/index.html">View demo</a>
 
 ## Topic 02: D3.js
+
+<img width="500" alt="screen-d3" src="https://github.com/user-attachments/assets/e9b6cfad-d51d-4367-9d84-a55ae965da13">
 
 This project was my first introduction to [D3](https://d3js.org/), a popular open-source library for visualizing data.
 
@@ -32,6 +36,8 @@ Since we were assigned written exercises in lieu of a project, you can see a sam
 
 
 ## Topic 04: Angular
+
+<img width="500" alt="screen-angular" src="https://github.com/user-attachments/assets/30e547b4-6bda-40ae-bd50-c71a334cb6e4">
 
 This project was my first experience with [Angular](https://angular.dev/). 
 
