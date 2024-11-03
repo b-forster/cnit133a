@@ -33,11 +33,22 @@ Since we were assigned written exercises in lieu of a project, you can see a sam
 
 ## Topic 04: Angular
 
-Coming soon!
+This project was my first experience with [Angular](https://angular.dev/). 
+
+For the assignment, I had to set up website for a farm selling snacks like nuts and dried fruit. It gave me a chance to practice generating components, routing, building a form with validations, and reading data from a JSON file.
+
+I also learned how to deploy apps to the web using [Surge](https://surge.sh/) and [Netlify](https://www.netlify.com/).
+
+There was a bit of a learning curve, but I didn't find Angular too difficult to pick up after my experience with React. I also enjoyed the predictability of the MVC architecture which I was familiar with from Ruby on Rails. I can see why Angular has been so popular with developers, and I would gladly work with it again.
+
+<a href="https://orchard-gems.netlify.app/">View demo</a>
+
 
 ## Topic 05: React
 
-Coming soon!
+Coming soon! 
+
+In the meantime, you can see a sample of my work with React in my [D&D Archivist](https://github.com/b-forster/dnd-archivist) repository (Warning: WIP!)
 
 ## Topic 06: Vue
 
