@@ -19,6 +19,10 @@ export class ContactComponent {
     })
   }
 
+  hasUserInput() {
+    return !this.emailForm.pristine;
+  }
+
   onSubmit() {
     this.submitted = true;
     if (!this.emailForm.invalid) {

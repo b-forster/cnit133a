@@ -10,10 +10,10 @@
                 class="err">
                 <div
                     *ngIf="emailForm.controls['fullName'].errors['required']">You
-                    cannot submit the form without a name</div>
+                    cannot submit the form without a name.</div>
                 <div
                     *ngIf="emailForm.controls['fullName'].errors['minlength']">A
-                    valid name needs to have at least 5 characters</div>
+                    valid name needs to have at least 5 characters.</div>
             </div>
         </label>
 
@@ -24,10 +24,10 @@
                 class="err">
                 <div
                     *ngIf="emailForm.controls['emailAddress'].errors['required']">You
-                    cannot submit the form without an email address</div>
+                    cannot submit the form without an email address.</div>
                 <div
                     *ngIf="emailForm.controls['emailAddress'].errors['email']">Please
-                    enter a valid email address</div>
+                    enter a valid email address.</div>
             </div>
         </label>
 
@@ -41,20 +41,30 @@
                     is your message to us?</div>
             </div>
         </label>
-
-        <input type="submit" value="Send Message" class="btnsub">
-        <input type="reset" value="Clear Form" class="btnsub">
-
+        <div class="form-btn-group">
+            <input type="reset" value="Clear Form"
+                class="form-btn-clear">
+            <input type="submit" value="Send Message"
+                class="form-btn-submit">
+        </div>
     </form>
 
-    <section *ngIf="submitted" class="finalresults">
+    <section *ngIf="valid" class="finalresults">
+        <p>Thank you for getting in touch!</p>
+        <p>We will respond shortly at the email address you provided.</p>
+    </section>
+
+    <section *ngIf="hasUserInput() && !valid"
+        class="finalresults">
         <h4>Data you are submitting</h4>
-        <p><em>Full Name:</em> <span>{{ emailForm.controls['fullName'].value
+        <p><em><strong>Full Name:</strong></em>&nbsp;<span>{{
+                emailForm.controls['fullName'].value
                 }}</span></p>
-        <p><em>Email Address:</em> <span>{{
+        <p><em><strong>Email Address:</strong></em>&nbsp;<span>{{
                 emailForm.controls['emailAddress'].value
                 }}</span></p>
-        <p><em>Message:</em> <span>{{ emailForm.controls['message'].value
+        <p><em><strong>Message:</strong></em>&nbsp;<span>{{
+                emailForm.controls['message'].value
                 }}</span></p>
     </section>
 </section>
