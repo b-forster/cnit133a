@@ -17,7 +17,7 @@ function App() {
   }
 
   return (
-    <CoursePath courses={COURSES} />
+    <CoursePath courseList={COURSES} />
   )
 }
 
