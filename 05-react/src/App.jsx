@@ -1,4 +1,5 @@
 import './App.css'
+import CoursePath from './CoursePath'
 
 function App() {
 
@@ -16,8 +17,7 @@ function App() {
   }
 
   return (
-    <>
-    </>
+    <CoursePath courses={COURSES} />
   )
 }
 
