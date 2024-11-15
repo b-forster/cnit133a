@@ -13,7 +13,7 @@ function AddCourseForm({
     // When list of courses is updated
     useEffect(() => {
         setAvailableCourseIds(Object.keys(COURSES).filter(courseId => { return !addedCourseIds.includes(courseId) }))
-        setUnmetPrereqs([]);
+        validatePrereqs(selectedCourseId);
     }, [addedCourseIds])
 
 
