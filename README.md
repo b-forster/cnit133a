@@ -56,7 +56,7 @@ There was a bit of a learning curve, but I didn't find Angular too difficult to 
 
 Description coming soon!
 
-<a href="https://https://cnit-course-plan.surge.sh/">View demo</a>
+<a href="https://cnit-course-plan.surge.sh/">View demo</a>
 
 ## Topic 06: Vue
 
