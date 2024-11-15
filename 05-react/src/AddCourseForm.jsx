@@ -34,7 +34,11 @@ function AddCourseForm({
     function handleChangeCourseSelection(e) {
         const selectedCourseId = e.target.value;
         setSelectedCourseId(selectedCourseId);
-        if (selectedCourseId) { validatePrereqs(selectedCourseId) };
+        if (selectedCourseId) {
+            validatePrereqs(selectedCourseId)
+        } else {
+            setUnmetPrereqs([]);
+        };
     }
 
     function handleAddCourse(e) {
