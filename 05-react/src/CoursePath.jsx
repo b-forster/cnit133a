@@ -1,8 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function CoursePath({ courseList }) {
     const [courseIds, setCourseIds] = useState([]); // ex: ['CNIT 132', 'CNIT 133']
     const [selectedCourseId, setSelectedCourseIds] = useState(''); // ex: 'CNIT 133'
+    const [availableCourseIds, setAvailableCourseIds] = useState(Object.keys(courseList)); // courses in list that are not yet added to course path
+
+    useEffect(() => {
+        setAvailableCourseIds(Object.keys(courseList).filter(courseId => { return !courseIds.includes(courseId) }))
+    }, [courseIds])
 
     function handleChangeCourseSelection(e) {
         setSelectedCourseIds(e.target.value);
@@ -21,7 +26,7 @@ function CoursePath({ courseList }) {
         <>
             <form onSubmit={handleAddCourse}>
                 <select onChange={handleChangeCourseSelection}>
-                    {Object.keys(courseList)
+                    {availableCourseIds
                         .map(courseId =>
                             <option
                                 value={courseId}
