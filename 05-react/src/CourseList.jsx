@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { COURSES, formatCourseName } from "./constants";
+import { COURSES, formatCourseName, maybePluralizeCourseNoun } from "./constants";
 
 function CourseList({
     addedCourseIds,
@@ -40,7 +40,7 @@ function CourseList({
 
     const formatPrereqErrorText = (courseId) => {
         let dependencies = getPrereqDependencies(courseId);
-        const courseNoun = dependencies.length === 1 ? 'course' : 'courses';
+        const courseNoun = maybePluralizeCourseNoun(dependencies.length);
         let errorText = `Cannot delete prerequisite for other added ${courseNoun}: `
         for (let i = 0; i < dependencies.length; i++) {
             errorText += dependencies[i];

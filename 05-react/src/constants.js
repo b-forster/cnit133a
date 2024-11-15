@@ -19,3 +19,7 @@ export const DEFAULT_COURSE_SELECTION = ['CNIT 103', 'CNIT 131', 'CNIT 106', 'CN
 export const formatCourseName = (courseId) => {
     return `${courseId} - ${COURSES[courseId]?.title}`;
 }
+
+export const maybePluralizeCourseNoun = (numCourses) => {
+    return numCourses === 1 ? 'course' : 'courses';
+}
