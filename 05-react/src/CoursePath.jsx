@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
-function CoursePath({ courseList }) {
-    const [courseIds, setCourseIds] = useState([]); // ex: ['CNIT 132', 'CNIT 133']
+function CoursePath({ courseList, defaultSelection }) {
+    const [courseIds, setCourseIds] = useState(defaultSelection || []); // ex: ['CNIT 132', 'CNIT 133']
     const [selectedCourseId, setSelectedCourseId] = useState(''); // ex: 'CNIT 133'
     const [availableCourseIds, setAvailableCourseIds] = useState(Object.keys(courseList)); // courses in list that are not yet added to course path
     const [unmetPrereqs, setUnmetPrereqs] = useState([]); // ex: ['CNIT 132', 'CNIT 133']

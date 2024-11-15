@@ -4,6 +4,9 @@ import CoursePath from './CoursePath'
 function App() {
 
   const COURSES = {
+    'CNIT 103': { title: 'Computer Hardware' },
+    'CNIT 106': { title: 'Introduction to Networks' },
+    'CNIT 120': { title: 'Network Security' },
     'CNIT 131': { title: 'Internet Basics and Beginning HTML' },
     'CNIT 131A': { title: 'XML and JSON' },
     'CNIT 131H': { title: 'Introduction to HTML and CSS' },
@@ -16,8 +19,10 @@ function App() {
     'CNIT 134': { title: 'Server Side Technologies for the Web', prereqs: ['CNIT 133'] },
   }
 
+  const DEFAULT_COURSE_SELECTION = ['CNIT 103', 'CNIT 131', 'CNIT 106', 'CNIT 120']
+
   return (
-    <CoursePath courseList={COURSES} />
+    <CoursePath courseList={COURSES} defaultSelection={DEFAULT_COURSE_SELECTION} />
   )
 }
 
