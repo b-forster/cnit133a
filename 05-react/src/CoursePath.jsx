@@ -15,7 +15,7 @@ function CoursePath({ courseList }) {
     function handleChangeCourseSelection(e) {
         const selectedCourseId = e.target.value;
         setSelectedCourseId(selectedCourseId);
-        validatePrereqs(selectedCourseId);
+        if (selectedCourseId) { validatePrereqs(selectedCourseId) };
     }
 
     function handleAddCourse(e) {
@@ -37,10 +37,17 @@ function CoursePath({ courseList }) {
         return unmetPrereqs?.length > 0;
     }
 
+    const shouldDisableAdd = () => {
+        return hasUnmetPrereqs() || !selectedCourseId;
+    }
+
     return (
         <>
             <form onSubmit={handleAddCourse}>
                 <select onChange={handleChangeCourseSelection}>
+                    <option value={""}>
+                        Choose a course to add to your plan:
+                    </option>
                     {availableCourseIds
                         .map(courseId =>
                             <option
@@ -52,7 +59,7 @@ function CoursePath({ courseList }) {
                             </option>
                         )}
                 </select>
-                <button type="submit" disabled={hasUnmetPrereqs()}>Add</button>
+                <button type="submit" disabled={shouldDisableAdd()}>Add</button>
                 {hasUnmetPrereqs() &&
                     (<div className='error'>
                         This course must be taken after the following prerequisite(s):
