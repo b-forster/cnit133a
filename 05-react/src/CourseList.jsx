@@ -41,7 +41,7 @@ function CourseList({
     const formatPrereqErrorText = (courseId) => {
         let dependencies = getPrereqDependencies(courseId);
         const courseNoun = maybePluralizeCourseNoun(dependencies.length);
-        let errorText = `Cannot delete prerequisite for other added ${courseNoun}: `
+        let errorText = `Cannot remove because this is a prerequisite for other listed ${courseNoun}: `
         for (let i = 0; i < dependencies.length; i++) {
             errorText += dependencies[i];
             if (i < (dependencies.length - 1)) { errorText += ', ' }
@@ -52,18 +52,20 @@ function CourseList({
     return (
         <ul>
             {addedCourseIds?.map(courseId =>
-                <li key={courseId} id={`display-${courseId}`}>
+                <li className='added-course-item' key={courseId} id={`display-${courseId}`}>
                     {formatCourseName(courseId)}
                     <button
+                        className='delete-btn'
                         onClick={() => handleDelete(courseId)}
                         disabled={shouldDisableDelete(courseId)}
-                        title={shouldDisableDelete(courseId) ? formatPrereqErrorText(courseId) : ''}
+                        title={shouldDisableDelete(courseId) ? formatPrereqErrorText(courseId) : 'Remove course'}
                     >
                         ❌
                     </button>
                 </li>
-            )}
-        </ul>
+            )
+            }
+        </ul >
     );
 }
 

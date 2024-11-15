@@ -1,0 +1,62 @@
+body {
+    margin: 2% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    --ccsf-red: #E32C2D;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+p {
+    max-width: 800px;
+}
+
+form {
+    margin: 0.5em;
+}
+
+hr {
+    width: 40%;
+    margin: 3em auto;
+    border: 2px solid var(--ccsf-red);
+    opacity: 100%;
+}
+
+.added-course-item {
+    padding: 0.3em 0;
+}
+
+.delete-btn {
+    border: 1px solid #aaa;
+    border-radius: 10%;
+    margin-left: 0.5em;
+}
+
+.error-container {
+    min-height: 3em;
+}
+
+.error,
+a {
+    color: var(--ccsf-red);
+}
+
+.error {
+    font-size: small;
+}
+
+.error p {
+    margin: 0;
+}
+
+.btn-primary {
+    background-color: var(--ccsf-red);
+}
