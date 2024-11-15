@@ -8,6 +8,7 @@ function CourseList({
     // { course ID: [list of courses that require given course ID as prereq] }
     // ex: { CNIT 133: [CNIT 133I, CNIT133M] }
     const [prereqDependencyMap, setPrereqDependencyMap] = useState({});
+    const [completedCourses, setCompletedCourses] = useState(new Set());
 
     useEffect(() => { populatePrereqDependencyMap() }, [addedCourseIds])
 
@@ -28,6 +29,21 @@ function CourseList({
 
     function handleDelete(courseId) {
         setAddedCourseIds((prev) => prev.filter(cId => { return cId !== courseId }))
+        if (completedCourses.has(courseId)) {
+            let completedList = new Set([...completedCourses]);
+            completedList.delete(courseId);
+            setCompletedCourses(completedList);
+        }
+    }
+
+    function handleToggleCheckbox(courseId) {
+        let completedList = new Set([...completedCourses]);
+        if (completedCourses.has(courseId)) {
+            completedList.delete(courseId);
+        } else {
+            completedList.add(courseId);
+        }
+        setCompletedCourses(completedList);
     }
 
     const getPrereqDependencies = (courseId) => {
@@ -50,10 +66,22 @@ function CourseList({
     }
 
     return (
-        <ul>
+        <ul className='form-check'>
             {addedCourseIds?.map(courseId =>
-                <li className='added-course-item' key={courseId} id={`display-${courseId}`}>
-                    {formatCourseName(courseId)}
+                <li
+                    className='added-course-item'
+                    key={courseId}
+                    id={`display-${courseId}`}
+                >
+                    <input
+                        type='checkbox'
+                        className='form-check-input'
+                        id={`checkbox-${courseId}`}
+                        onChange={() => handleToggleCheckbox(courseId)}
+                    />
+                    <label htmlFor={`checkbox-${courseId}`}>
+                        {formatCourseName(courseId)}
+                    </label>
                     <button
                         className='delete-btn'
                         onClick={() => handleDelete(courseId)}
