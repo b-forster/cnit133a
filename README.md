@@ -8,7 +8,7 @@ This is intended to showcase my learning, and should not be used by students enr
 
 ## Topic 01: jQuery
 
-<img width="500" alt="screen-jquery" src="https://github.com/user-attachments/assets/09d17faa-057d-43d7-9835-305a3e73fe37">
+<img width="500" alt="Screenshot of jQuery project" src="https://github.com/user-attachments/assets/09d17faa-057d-43d7-9835-305a3e73fe37">
 
 This project was a review of the [jQuery](https://jquery.com/) library, which was introduced in a prerequisite course.
 
@@ -20,9 +20,9 @@ The page also includes a section of text regarding [HTMX](https://htmx.org/). It
 
 ## Topic 02: D3.js
 
-<img width="500" alt="screen-d3" src="https://github.com/user-attachments/assets/e9b6cfad-d51d-4367-9d84-a55ae965da13">
+<img width="500" alt="Screenshot of D3 project" src="https://github.com/user-attachments/assets/e9b6cfad-d51d-4367-9d84-a55ae965da13">
 
-This project was my first introduction to [D3](https://d3js.org/), a popular open-source library for visualizing data.
+This project was my first introduction to [D3](https://d3js.org/), a popular open-source library for visualizing data. The copy and design were created by me, and I did not use any styling libraries.
 
 I used D3 to generate a bar chart from JSON data representing student enrollment numbers for several academic terms. I also used D3 to trigger a tooltip when a bar is moused over, showing the corresponding number of students above the bar.
 
@@ -37,9 +37,9 @@ Since we were assigned written exercises in lieu of a project, you can see a sam
 
 ## Topic 04: Angular
 
-<img width="500" alt="screen-angular" src="https://github.com/user-attachments/assets/30e547b4-6bda-40ae-bd50-c71a334cb6e4">
+<img width="500" alt="Screenshot of Angular project" src="https://github.com/user-attachments/assets/30e547b4-6bda-40ae-bd50-c71a334cb6e4">
 
-This project was my first experience with [Angular](https://angular.dev/). 
+This project was my first experience with [Angular](https://angular.dev/). The copy and design were created by me, and the logo was created with [icons8](https://icons8.com/icons).
 
 For the assignment, I had to set up website for a farm selling snacks like nuts and dried fruit. It gave me a chance to practice generating components, routing, building a form with validations, and reading data from a JSON file.
 
@@ -52,9 +52,11 @@ There was a bit of a learning curve, but I didn't find Angular too difficult to 
 
 ## Topic 05: React
 
-Coming soon! 
+<img width="500" alt="Screenshot of React project" src="https://github.com/user-attachments/assets/bf3dcfe7-435f-4ae6-a36f-bb0069198fb3">
 
-In the meantime, you can see a sample of my work with React in my [D&D Archivist](https://github.com/b-forster/dnd-archivist) repository (Warning: WIP!)
+Description coming soon!
+
+<a href="https://https://cnit-course-plan.surge.sh/">View demo</a>
 
 ## Topic 06: Vue
 
