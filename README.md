@@ -34,7 +34,9 @@ The text and design were created by me.
 
 This module covered two technologies I was already very familiar with: [Typescript](https://www.typescriptlang.org/) and [Node](https://nodejs.org/en). It also introduced me to [Deno](https://deno.com/), a framework similar to Node and made by the same creator.
 
-Since we were assigned written exercises in lieu of a project, you can see a sample of my work with Node in my [D&D Archivist](https://github.com/b-forster/dnd-archivist) repository (Warning: WIP!)
+Since we were assigned written exercises in lieu of a project, you can see samples of my work with these technologies in the following repositories:
+- Typescript: [Reminders](https://github.com/b-forster/react-reminders)
+- Node: [D&D Archivist](https://github.com/b-forster/dnd-archivist) (Warning: WIP!)
 
 ## Topic 04: Angular
 
@@ -56,7 +58,18 @@ There was a bit of a learning curve, but I didn't find Angular too difficult to 
 
 <img width="500" alt="Screenshot of React project" src="https://github.com/user-attachments/assets/bf3dcfe7-435f-4ae6-a36f-bb0069198fb3">
 
-Description coming soon!
+This was my time to shine with my favorite frontend library, [React](https://react.dev/).
+
+The task was to create a course planning tool which allows students to add and remove courses from the CNIT department at CCSF.
+
+As I was already pretty familiar with React from 4+ years of professional experience, I was able to go beyond the requirements by adding a few bonus features:
+- Courses are removed from the dropdown when added to the course list, and added back to the dropdown when the course is deleted from the list.
+- The add course button is disabled and info text is shown if a student selects a course whose prerequisite(s) have not yet been added to the list.
+- The delete course button is disabled with an informational tooltip on hover if that course is a prerequisite for one or more other courses on the list.
+
+This was my first opportunity using [Vite](https://vite.dev/) to bootstrap a React app, and since learning that it's 20% the package size of my usual go-to [Create React App](https://create-react-app.dev/) with all the speed and features I'm used to, I see no reason to go back.
+
+I used [Bootstrap](https://getbootstrap.com/) for styling, which I hadn't used in a few years and wanted to keep my skills fresh. Considering the size it may have been overkill for this small of a project, but I appreciated how quickly and simply it allowed me to create a unified look and feel.
 
 <a href="https://cnit-course-plan.surge.sh/">View demo</a>
 
